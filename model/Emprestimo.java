@@ -12,10 +12,10 @@ public class Emprestimo {
 	public Emprestimo(Livro livro, Membro membro, 
 			LocalDate dataEmprestimo, LocalDate dataDevolucao) {
 		
-		this.setLivro(livro);
-		this.setMembro(membro);
-		this.setDataEmprestimo(dataEmprestimo);
-		this.setDataDevolucao(dataDevolucao);
+		this.livro = livro;
+		this.membro = membro;
+		this.dataEmprestimo = dataEmprestimo;
+		this.dataDevolucao = dataDevolucao;
 		
 	}
 
@@ -51,13 +51,14 @@ public class Emprestimo {
 		this.dataDevolucao = dataDevolucao;
 	}
 	
-	public String exibirInformacoes() {
+	@Override
+	public String toString() {
 		return "EMPRÉSTIMO [" 
-				+ "LIVRO:'" + livro + '\'' 
-				+ ", MEMBRO:'" + membro + '\'' 
-				+ ", DATA DO EMPRÉSTIMO:'" + dataEmprestimo + '\'' 
-				+ ", DATA DA DEVOLUÇÃO:'" + dataDevolucao + '\'' 
-				+ ']';
+			+ "LIVRO:'" + livro + '\'' 
+			+ ", MEMBRO:'" + membro + '\'' 
+			+ ", DATA DO EMPRÉSTIMO:'" + dataEmprestimo + '\'' 
+			+ ", DATA DA DEVOLUÇÃO:'" + dataDevolucao + '\'' 
+			+ ']';
 	}
 	
 }
