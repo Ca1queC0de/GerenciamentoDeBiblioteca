@@ -5,9 +5,9 @@ public class Membro {
 	private String nome;
 	private String idMembro;
 	
-	public Membro() {
-		this.setNome(nome);
-		this.setIdMembro(idMembro);
+	public Membro(String nome, String idMembro) {
+		this.nome = nome;
+		this.idMembro = idMembro;
 	}
 
 	public String getNome() {
@@ -26,7 +26,8 @@ public class Membro {
 		this.idMembro = idMembro;
 	}
 	
-	public String exibirInformacoes() {
+	@Override
+	public String toString() {
 		return "MEMBRO [" 
 				+ "NOME:'" + nome + '\'' 
 				+ ", ID:'" + idMembro + '\'' 
