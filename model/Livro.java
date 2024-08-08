@@ -4,12 +4,12 @@ public class Livro {
 	
 	private String titulo;
 	private String autor;
-	private int numeroPaginas;
+	private String numeroPaginas;
 	
-	public Livro(String titulo, String autor, int numeroPaginas) {
-		this.setTitulo(titulo);
-		this.setAutor(autor);
-		this.setNumeroPaginas(numeroPaginas);
+	public Livro(String titulo, String autor, String numeroPaginas) {
+		this.titulo = titulo;
+		this.autor = autor;
+		this.numeroPaginas = numeroPaginas;
 	}
 
 	public String getTitulo() {
@@ -28,21 +28,22 @@ public class Livro {
 		this.autor = autor;
 	}
 
-	public int getNumeroPaginas() {
+	public String getNumeroPaginas() {
 		return numeroPaginas;
 	}
 
-	public void setNumeroPaginas(int numeroPaginas) {
-		this.numeroPaginas = numeroPaginas;
+	public void setNumeroPaginas(String numeroPaginas2) {
+		this.numeroPaginas = numeroPaginas2;
 	}
 	
-	public String exibirInformacoes() {
+	@Override
+	public String toString() {
 		return "LIVRO [" 
-				+ "TÍTULO:'" + titulo + '\'' 
-				+ ", AUTOR:'" + autor + '\'' 
-				+ ", PAGINAS:'" + numeroPaginas + '\'' 
-				+ ']';
+			+ "TÍTULO:'" + titulo + '\'' 
+			+ ", AUTOR:'" + autor + '\'' 
+			+ ", PAGINAS:'" + numeroPaginas + '\'' 
+			+ ']';
 	}
 	
-}
 
+}
